@@ -1,49 +1,41 @@
 #root.root {--tabs-indent: 0px;}
 #root.root {--general-border-radius: 4px;}
-#root.root {--toolbar-bg: #dcdcdc;}
-#root.root {--frame-bg: #dcdcdc;}
+#root.root {--toolbar-bg: #2b2a33;}
+#root.root {--frame-bg: #2b2a33;}
 #root.root {--tabs-height: 32px;}
 #root.root {--tabs-margin: 6px;}
 #root.root {--pinned-tabs-col: 4;}
 #root.root {
   flex-direction: column;
 }
-
 .NavigationBar .main-items {
     justify-content: center;
 }
-
 .NavigationBar[data-layout="inline"] .main-items .nav-item {
     transform: translateX(0) !important;
     position: relative !important;
     flex-grow: 1;
     max-width: 44px;
 }
-
 .NavigationBar[data-layout="inline"] .main-items .nav-item[data-active="false"] {
     display: none;
 }
-
 /* Dimmed inactive panels */
 .NavigationBar .nav-item[data-active="false"] {
     opacity: 0.5;
 }
-
 .NavigationBar .nav-item[data-active="false"]:hover {
     opacity: 0.7;
 }
-
 /* Active panel background */
 .NavigationBar .nav-item[data-active="true"] {
     opacity: 1;
     background: rgba(128, 128, 128, 0.15);
     border-radius: 4px;
 }
-
 .BottomBar {
     display: none;
 }
-
 /* Blue unread indicators - ADDED BACK */
 .Tab[data-updated="true"]::before {
     content: '';
@@ -57,49 +49,39 @@
     border-radius: 50%;
     z-index: 10;
 }
-
 .Tab[data-updated="true"] .fav {
     margin-left: 8px;
 }
-
 .Tab .audio, .Tab .title {
     opacity: 0 !important;
 }
-
 /* Pinned tab styling */
 .Tab[data-pin="true"] .fav, .Tab[data-pin="true"] .fav-icon {
     width: 20px;
     height: 20px;
 }
-
 .Tab[data-pin="false"] .fav, .Tab[data-pin="false"] .fav-icon {
     width: 18px;
     height: 18px;
 }
-
 .Tab[data-pin="true"][data-active="true"] .color-layer {
-   background-color: #ffffff !important;
+   background-color: #52526b !important;
 }
-
 .Tab[data-pin="false"] .color-layer {
     opacity: 0 !important;
     border: 0 !important;
 }
-
 .Tab[data-pin="false"][data-active="true"] .body {
-    box-shadow: rgba(17, 17, 26, 0.15) 0px 0px 16px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 16px;
 }
-
 .Tab[data-pin="false"] {
     border: 0 !important;
 }
-
 .Tab .title {
-    background: linear-gradient(90deg, var(--tabs-normal-fg) 80%, #f1f1f100 99%);
+    background: linear-gradient(90deg, var(--tabs-normal-fg) 80%, #1c1b2200 99%);
     background-clip: text;
     color: transparent;
 }
-
 @media screen and (min-width: 300px) {
   .NavigationBar[data-layout="inline"] .main-items .nav-item[data-active="false"] {
       display: flex;
